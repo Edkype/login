@@ -1,0 +1,14 @@
+// client/src/main.tsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import { FluentProvider, webDarkTheme } from '@fluentui/react-components';
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    {/* We wrap everything in FluentProvider to ensure styles work */}
+    <FluentProvider theme={webDarkTheme}>
+      <App />
+    </FluentProvider>
+  </React.StrictMode>,
+)
